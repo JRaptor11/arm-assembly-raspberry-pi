@@ -1,33 +1,98 @@
 # ARM Assembly on Raspberry Pi
 
-This project demonstrates low-level programming in ARM assembly on a Raspberry Pi, including hardware interaction using GPIO.
+This project demonstrates low-level programming in ARM assembly on a Raspberry Pi, including direct hardware interaction using GPIO to display results through LEDs.
 
 ## Overview
 
-The project includes assembly programs that process input data and control hardware outputs such as LEDs.
+The system processes a 15-character input string, counts occurrences of the substring "LMU", and outputs the result in two ways:
+
+- Decimal output displayed on a monitor  
+- Binary output displayed using GPIO-connected LEDs  
+
+This project emphasizes low-level execution, memory control, and hardware-software integration.
+
+## System Architecture
+
+- ARM assembly program running on Raspberry Pi  
+- GPIO control for LED output (pins 17, 18, 27)  
+- Real-time user input processing  
+- Infinite loop execution for continuous operation  
+
+---
+
+## Algorithm Design
+
+![Flowchart](images/flowchart.png)
+
+The program follows a structured algorithm to read user input, scan for the substring "LMU", count occurrences, and output results. The flowchart illustrates the step-by-step logic used in the assembly implementation.
+
+---
+
+## Test Case 1
+
+![Test Case 1](images/test-case-1.png)
+
+Input:
+
+```
+LMU!LMU!LMU!!
+```
+
+
+Output:
+- Count = 3  
+- LEDs display binary representation of 3  
+
+---
+
+## Test Case 2
+
+![Test Case 2](images/test-case-2.png)
+
+Input:
+
+```
+LMU!LMX!LXX!!
+```
+
+
+Output:
+- Count = 1  
+- LEDs display binary representation of 1  
+
+---
 
 ## Key Features
 
-- ARM assembly programming
-- GPIO control for hardware interaction
-- Real-time execution on Raspberry Pi
-- Binary output representation using LEDs
+- ARM assembly string processing  
+- Substring detection and counting  
+- Direct GPIO control for hardware output  
+- Binary representation using LEDs  
+- Continuous execution loop  
 
-## Repository Structure
+---
 
-- `docs/` – program explanations and reports  
-- `images/` – hardware setup and output demonstrations  
+## Files
+
+- `docs/lmu-counter.pdf` — full assembly program and analysis  
+
+---
 
 ## Skills Demonstrated
 
-- Embedded systems programming
-- Low-level software development
-- Hardware-software integration
-- Debugging assembly code
+- Embedded systems programming  
+- ARM assembly development  
+- Hardware-software integration  
+- GPIO interfacing  
+- Low-level debugging and execution  
 
-## Status
+---
 
-Project in progress — code and documentation being added.
+## Why This Project Matters
+
+This project demonstrates control at the lowest level of computing, directly interfacing with hardware. It highlights the ability to move beyond high-level programming and work with system architecture, memory, and hardware control.
+
+---
 
 ## Author
 
